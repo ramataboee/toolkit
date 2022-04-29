@@ -16,6 +16,7 @@ export function getAuthString(
 }
 
 export function getProxyAgent(destinationUrl: string): http.Agent {
+  const URL = require("url").URL
   const hc = new httpClient.HttpClient()
   return hc.getAgent(destinationUrl)
 }
